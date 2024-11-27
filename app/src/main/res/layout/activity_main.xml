@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/Gris">
+
+
+        <EditText
+            style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/Busqueda"
+            android:drawableEnd="@android:drawable/ic_menu_search"
+            android:drawableTint="#000000"
+            android:hint="Buscar"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="@string/Gymgoals"
+        android:textSize="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="150dp"
+        android:background="@color/Golas"
+        android:layout_marginStart="43dp"
+        style=""
+        >
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="@string/Rutnias"
+        android:textSize="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        />
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="43dp"
+        android:background="@color/rutinacolor"
+
+
+</LinearLayout>
