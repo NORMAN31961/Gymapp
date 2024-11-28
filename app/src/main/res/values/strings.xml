@@ -6,5 +6,10 @@
     <string name="Menu_Icon">Menu Icono</string>
     <string name="Search_Icon">Buscar Icono</string>
     <string name="Streak_Days">Días de Racha</string>
+    <string name="Perfil">Perfil</string>
+    <string name="Email">Correo\n</string>
+    <string name="Password">Contraseña</string>
+    <string name="Confirm">Confirmar</string>
+    <string name="QuestionRegister">¿Desea Registarse?</string>
 
 </resources>
