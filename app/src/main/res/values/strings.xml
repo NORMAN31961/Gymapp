@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Gym</string>
-    <string name="Gymgoals">GymGoals\n</string>
+    <string name="GymGoals">GymGoals</string>
     <string name="Rutnias">Rutina</string>
+    <string name="Search">Buscar</string>
+    <string name="Menu_Icon">Menu Icono</string>
+    <string name="Search_Icon">Buscar Icono</string>
+    <string name="Streak_Days">Días de Racha</string>
+
 </resources>
