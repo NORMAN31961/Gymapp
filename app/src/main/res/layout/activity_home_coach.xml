@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home_coach"
+    android:orientation="vertical"
+    android:background="@color/SearchBar">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/Gris"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.1"
+            android:contentDescription="@string/Menu_Icon"
+            android:src="@drawable/menu_ic" />
+
+        <TextView
+            android:id="@+id/search_Bar_Home_Customer"
+            style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.8"
+            android:backgroundTint="@color/SearchBar"
+            android:hint="@string/Settings"
+            android:textColorHint="@color/black"
+            android:textSize="30sp"
+            android:paddingTop="4dp"
+            android:paddingBottom="0dp"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/GymGoals"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:paddingStart="20dp"
+        android:textColor="@color/black"
+        />
+    <Button
+        android:id="@+id/add_rutines"
+        android:textStyle="bold"
+        style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="180dp"
+        android:backgroundTint="@color/Goals"
+        android:hint="@string/add_rutins"
+        android:paddingTop="9dp"
+        android:textAlignment="center"
+        android:textColorHint="@color/black"
+        android:textSize="22sp"/>
+    <Button
+        android:id="@+id/see_rutines"
+        android:textStyle="bold"
+        style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/Goals"
+        android:hint="@string/see_rutins"
+        android:paddingTop="9dp"
+        android:textAlignment="center"
+        android:textColorHint="@color/black"
+        android:textSize="22sp"/>
+
+</LinearLayout>

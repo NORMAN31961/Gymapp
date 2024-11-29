@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Gym</string>
-    <string name="GymGoals">GymGoals</string>
+    <string name="GymGoals">GYMGOALS</string>
     <string name="Rutnias">Rutina</string>
     <string name="Search">Buscar</string>
     <string name="Menu_Icon">Menu Icono</string>
@@ -11,5 +11,11 @@
     <string name="Password">Contraseña</string>
     <string name="Confirm">Confirmar</string>
     <string name="QuestionRegister">¿Desea Registarse?</string>
+    <string name="loggin">Iniciar sesion</string>
+    <string name="about_us">Acerca de nosotros</string>
+    <string name="Faq">FAQ</string>
+    <string name="Settings">Configuracion</string>
+    <string name="add_rutins">AGREGAR RUTINA</string>
+    <string name="see_rutins">VER RUTNAS\n</string>
 
 </resources>
