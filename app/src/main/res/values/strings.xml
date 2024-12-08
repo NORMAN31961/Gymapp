@@ -7,7 +7,7 @@
     <string name="Search_Icon">Buscar Icono</string>
     <string name="Streak_Days">Días de Racha</string>
     <string name="Perfil">Perfil</string>
-    <string name="Email">Correo\n</string>
+    <string name="Email">Correo</string>
     <string name="Password">Contraseña</string>
     <string name="Confirm">Confirmar</string>
     <string name="QuestionRegister">¿Desea Registarse?</string>
@@ -16,6 +16,14 @@
     <string name="Faq">FAQ</string>
     <string name="Settings">Configuracion</string>
     <string name="add_rutins">AGREGAR RUTINA</string>
-    <string name="see_rutins">VER RUTNAS\n</string>
+    <string name="see_rutins">VER RUTINAS\n</string>
+    <string name="Logo">Logo</string>
+    <string name="home">Inicio</string>
+    <string-array name="Experience">
+        <item>Principiante</item>
+        <item>Intermedio</item>
+        <item>Avanzado</item>
+    </string-array>
+    <string name="Name">Nombre</string>
 
 </resources>

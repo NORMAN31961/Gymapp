@@ -13,22 +13,10 @@
         android:theme="@style/Theme.Gym"
         tools:targetApi="31">
         <activity
-            android:name=".home_coach"
+            android:name=".HomeCoachActivity"
             android:exported="false" />
         <activity
-            android:name=".settings"
-            android:exported="false" />
-        <activity
-            android:name=".login"
-            android:exported="false" />
-        <activity
-            android:name=".register"
-            android:exported="false" />
-        <activity
-            android:name=".profile"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
