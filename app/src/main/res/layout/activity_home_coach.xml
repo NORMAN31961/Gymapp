@@ -23,7 +23,8 @@
             android:layout_marginTop="10dp"
             android:layout_weight="0.1"
             android:contentDescription="@string/Menu_Icon"
-            android:src="@drawable/menu_ic" />
+            android:src="@drawable/menu_ic"
+            app:tint="@color/light_gray"/>
 
         <TextView
             android:id="@+id/search_Bar_Home_Customer"
@@ -37,9 +38,8 @@
             android:hint="@string/home"
             android:paddingTop="4dp"
             android:paddingBottom="0dp"
-            android:textColorHint="@color/black"
-            android:textSize="40sp"
-            android:textStyle="bold" />
+            android:textColorHint="@color/light_gray"
+            android:textSize="40sp"/>
 
     </LinearLayout>
 

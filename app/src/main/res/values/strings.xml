@@ -41,5 +41,9 @@
     <string name="AssignRoutine">Asignar rutina</string>
     <string name="NameRoutine">Nombre de la rutina</string>
     <string name="AddedRoutine">Rutina Agregada!!</string>
+    <string name="DescriptionRoutine">Descripción de la Rutina</string>
+    <string name="ProfileImage">Imagen de perfil</string>
+    <string name="close">Cerrado</string>
+    <string name="open">Abierto</string>
 
 </resources>

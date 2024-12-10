@@ -17,7 +17,7 @@
         android:src="@drawable/logo_gym_goals"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <Spinner
         android:id="@+id/spinner_Experience"
@@ -36,7 +36,7 @@
         android:layout_height="53dp"
         android:layout_marginTop="21dp"
         android:autofillHints="emailAddress"
-        android:background="@drawable/edit_text_border"
+        android:background="@drawable/gray_border_10dp"
         android:hint="@string/Name"
         android:inputType="textEmailAddress"
         android:padding="10dp"
@@ -55,7 +55,7 @@
         android:layout_height="53dp"
         android:layout_marginTop="21dp"
         android:autofillHints="emailAddress"
-        android:background="@drawable/edit_text_border"
+        android:background="@drawable/gray_border_10dp"
         android:hint="@string/Email"
         android:inputType="textEmailAddress"
         android:padding="10dp"
@@ -74,7 +74,7 @@
         android:layout_height="53dp"
         android:layout_marginTop="26dp"
         android:autofillHints="password"
-        android:background="@drawable/edit_text_border"
+        android:background="@drawable/gray_border_10dp"
         android:hint="@string/Password"
         android:inputType="textPassword"
         android:padding="10dp"
@@ -93,7 +93,7 @@
         android:layout_height="53dp"
         android:layout_marginTop="26dp"
         android:autofillHints="password"
-        android:background="@drawable/edit_text_border"
+        android:background="@drawable/gray_border_10dp"
         android:hint="@string/Password"
         android:inputType="textPassword"
         android:padding="10dp"

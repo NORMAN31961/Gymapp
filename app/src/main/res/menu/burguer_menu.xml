@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/menu_profile"
-            android:icon="@drawable/profile_icon"
-            android:title="@string/Profile" />
-        <item
-            android:id="@+id/menu_settings"
-            android:icon="@drawable/settings_icon"
-            android:title="@string/Settings" />
-        <item
-            android:id="@+id/menu_home"
-            android:icon="@drawable/home_icon"
-            android:title="@string/home"
-            android:checked="true"/>
-    </group>
+    android:id="@+id/burguer_menu"
+    tools:showIn="navigation_view"
+    >
+
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/profile_icon"
+        android:title="@string/Profile" />
+    <item
+        android:id="@+id/menu_settings"
+        android:icon="@drawable/settings_icon"
+        android:title="@string/Settings" />
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/home_icon"
+        android:title="@string/home"
+        android:checked="true"/>
+
 </menu>

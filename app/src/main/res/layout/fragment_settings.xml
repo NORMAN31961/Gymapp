@@ -15,29 +15,28 @@
         android:background="@color/gray"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/menu_icon"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+        <ImageButton
+            android:id="@+id/back_icon"
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_weight="0.1"
+            android:background="@color/gray"
             android:contentDescription="@string/Menu_Icon"
-            android:src="@drawable/menu_ic" />
+            android:src="@drawable/menu_ic"
+            app:tint="@color/light_gray" />
 
         <TextView
-            android:id="@+id/search_Bar_Home_Customer"
+            android:id="@+id/text_view_routine_title"
             style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:layout_weight="0.8"
-            android:backgroundTint="@color/light_gray"
+            android:layout_height="70dp"
+            android:layout_weight="0.7"
             android:fontFamily="@font/bebas_neue_regular"
-            android:hint="@string/Settings"
-            android:paddingTop="4dp"
-            android:paddingBottom="0dp"
-            android:textColorHint="@color/black"
-            android:textSize="40sp" />
+            android:text="@string/Settings"
+            android:textColor="@color/light_gray"
+            android:textSize="35sp" />
 
     </LinearLayout>
 
@@ -56,10 +55,12 @@
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/gray_border_10dp"
+            android:fontFamily="@font/bebas_neue_regular"
             android:hint="@string/login"
             android:paddingTop="9dp"
             android:textAlignment="center"
             android:textColorHint="@color/black"
+            android:textSize="22sp"
             app:backgroundTint="@null" />
 
         <Button
@@ -69,11 +70,12 @@
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/gray_border_10dp"
-
+            android:fontFamily="@font/bebas_neue_regular"
             android:hint="@string/about_us"
             android:paddingTop="9dp"
             android:textAlignment="center"
             android:textColorHint="@color/black"
+            android:textSize="22sp"
             app:backgroundTint="@null" />
 
         <Button
@@ -83,10 +85,12 @@
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/gray_border_10dp"
+            android:fontFamily="@font/bebas_neue_regular"
             android:hint="@string/Faq"
             android:paddingTop="9dp"
             android:textAlignment="center"
             android:textColorHint="@color/black"
+            android:textSize="22sp"
             app:backgroundTint="@null" />
 
     </LinearLayout>

@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#F5F5F5"
     android:orientation="vertical">
 
@@ -20,7 +21,8 @@
             android:layout_marginTop="18dp"
             android:layout_weight="0.1"
             android:contentDescription="@string/Menu_Icon"
-            android:src="@drawable/arrow_back_icon" />
+            android:src="@drawable/arrow_back_icon"
+            app:tint="@color/light_gray" />
 
         <TextView
             android:id="@+id/text_view_routine_title"
@@ -30,7 +32,7 @@
             android:layout_weight="0.7"
             android:fontFamily="@font/bebas_neue_regular"
             android:text="@string/AssignRoutine"
-            android:textColor="@color/black"
+            android:textColor="@color/light_gray"
             android:textSize="35sp" />
 
     </LinearLayout>
