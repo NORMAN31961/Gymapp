@@ -1,10 +1,45 @@
 <resources>
-    <string name="app_name">Gym</string>
-    <string name="GymGoals">GymGoals</string>
-    <string name="Rutnias">Rutina</string>
+    <string name="app_name">Gym Goals</string>
+    <string name="GymGoals">GYMGOALS</string>
+    <string name="Rutine">Rutina</string>
     <string name="Search">Buscar</string>
     <string name="Menu_Icon">Menu Icono</string>
     <string name="Search_Icon">Buscar Icono</string>
     <string name="Streak_Days">Días de Racha</string>
+    <string name="Profile">Perfil</string>
+    <string name="Email">Correo</string>
+    <string name="Password">Contraseña</string>
+    <string name="Confirm">Confirmar</string>
+    <string name="QuestionRegister">¿Desea Registarse?</string>
+    <string name="login">Iniciar sesion</string>
+    <string name="about_us">Acerca de nosotros</string>
+    <string name="Faq">FAQ</string>
+    <string name="Settings">Configuracion</string>
+    <string name="add_rutins">AGREGAR RUTINA</string>
+    <string name="see_rutins">VER RUTINAS\n</string>
+    <string name="Logo">Logo</string>
+    <string name="home">Inicio</string>
+    <string-array name="Experience">
+        <item>Principiante</item>
+        <item>Intermedio</item>
+        <item>Avanzado</item>
+    </string-array>
+    <string name="Name">Nombre</string>
+    <string name="username">Nombre de Usuario</string>
+    <string name="Excercise">Ejercicio</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Gym">Gym</string>
+    <string name="House">Casa</string>
+    <string name="Init_Routine">Iniciar</string>
+    <string name="back">Volver</string>
+    <string name="gif_placeholder">GIF</string>
+    <string name="Instructions">Instrucción 1\nInstrucción 2\nInstrucción 3</string>
+    <string name="next">Siguiente</string>
+    <string name="Rutine_Completed">¡FELICIDADES!!!!\nACABASTE LA RUTINA DEL\nDÍA DE HOY</string>
+    <string name="SelectedExcercise">Seleccionar Ejercicio</string>
+    <string name="Customer">Cliente</string>
+    <string name="AssignRoutine">Asignar rutina</string>
+    <string name="NameRoutine">Nombre de la rutina</string>
+    <string name="AddedRoutine">Rutina Agregada!!</string>
 
 </resources>

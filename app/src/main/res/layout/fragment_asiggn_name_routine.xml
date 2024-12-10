@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".AsiggnNameRoutineFragment">
+
+    <LinearLayout
+        android:id="@+id/bar_routine"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/gray"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18dp"
+            android:layout_weight="0.1"
+            android:contentDescription="@string/Menu_Icon"
+            android:src="@drawable/arrow_back_icon" />
+
+        <TextView
+            android:id="@+id/text_view_routine_title"
+            style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/bebas_neue_regular"
+            android:text="@string/Rutine"
+            android:textColor="@color/black"
+            android:textSize="35sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvNameRoutine"
+        style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_weight="0.7"
+        android:fontFamily="@font/bebas_neue_regular"
+        android:text="@string/NameRoutine"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="@id/EditText_name_routine"
+        app:layout_constraintTop_toBottomOf="@id/bar_routine" />
+
+    <EditText
+        android:id="@+id/EditText_name_routine"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="312dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="76dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/edit_text_border"
+        android:hint="@string/Email"
+        android:inputType="textEmailAddress"
+        android:padding="9dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bar_routine" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_StreakDays_Container_View_Home_Customer"
+        android:name="com.example.gym.StreakDaysFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EditText_name_routine" />
+
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_orange_forward_border"
+        android:contentDescription="@string/next"
+        android:scaleType="center"
+        android:src="@drawable/arrow_forward_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
