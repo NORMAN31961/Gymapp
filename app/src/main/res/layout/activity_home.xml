@@ -47,6 +47,7 @@
                 android:fontFamily="@font/bebas_neue_regular"
                 android:hint="@string/Search"
                 android:inputType="text"
+                android:textColor="@color/black"
                 android:textColorHint="@color/black"
                 android:textSize="20sp" />
 

@@ -3,7 +3,6 @@ package com.example.gym
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.ViewGroup
-
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity

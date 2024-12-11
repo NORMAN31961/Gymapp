@@ -82,7 +82,7 @@
             android:id="@+id/recycler_view_routine_exercise"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            tools:listitem="@layout/excercise_item" />
+            tools:listitem="@layout/item_excercise" />
 
     </ScrollView>
 
