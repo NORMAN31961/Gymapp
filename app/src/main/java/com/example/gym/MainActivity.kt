@@ -1,15 +1,10 @@
 package com.example.gym
 
 import android.os.Bundle
-import android.view.ViewGroup
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.gym.databinding.ActivityMainBinding
 
@@ -40,6 +35,7 @@ class MainActivity : AppCompatActivity() {
     fun replaceFragment(frag: Fragment) {
         val fgTransaction = supportFragmentManager.beginTransaction()
         fgTransaction.replace(R.id.main, frag)
+        fgTransaction.addToBackStack(null)
         fgTransaction.commit()
     }
 
