@@ -45,5 +45,6 @@
     <string name="ProfileImage">Imagen de perfil</string>
     <string name="close">Cerrado</string>
     <string name="open">Abierto</string>
+    <string name="ConfirmPassword">Confirmar Contraseña</string>
 
 </resources>

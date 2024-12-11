@@ -60,11 +60,11 @@ dependencies {
     implementation ("com.google.android.material:material:1.3.0-alpha03")
     implementation ("de.hdodenhof:circleimageview:3.1.0")
 
-    /*
-    *https://github.com/square/picasso
-    * *  */
-
-    implementation("com.squareup.picasso:picasso:2.8")
+//    /*
+//    *https://github.com/square/picasso
+//    * *  */
+//
+//    implementation("com.squareup.picasso:picasso:2.8")
 
     /*
     * https://developer.android.com/jetpack/androidx/releases/recyclerview?hl=es-419

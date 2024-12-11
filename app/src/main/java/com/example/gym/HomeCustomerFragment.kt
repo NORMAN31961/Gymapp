@@ -34,8 +34,13 @@ class HomeCustomerFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+       init()
+    }
+
+    private fun init(){
         initDrawer()
         buttons_Navigation()
+        event_Routine()
     }
 
     fun initDrawer() {
@@ -71,12 +76,22 @@ class HomeCustomerFragment : Fragment() {
         }
     }
 
+    private fun event_Routine(){
+        binding.routineContainerHomeCustomer.setOnClickListener {
+            launchRoutineFragment()
+        }
+    }
+
     private fun launchProfileFragment(){
         (activity as MainActivity).replaceFragment(ProfileFragment())
     }
 
     private fun launchSettingsFragment(){
         (activity as MainActivity).replaceFragment(SettingsFragment())
+    }
+
+    private fun launchRoutineFragment(){
+        (activity as MainActivity).replaceFragment(RoutineFragment())
     }
 
 

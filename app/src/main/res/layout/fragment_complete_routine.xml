@@ -48,7 +48,7 @@
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/btnNext"
+        android:id="@+id/btnHome"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_gravity="end"

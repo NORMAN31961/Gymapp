@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_gray"
-    tools:context=".RutineFragment">
+    tools:context=".RoutineFragment">
 
     <LinearLayout
         android:id="@+id/bar_routine"
@@ -24,6 +24,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_weight="0.1"
+            app:tint="@color/light_gray"
             android:contentDescription="@string/Menu_Icon"
             android:src="@drawable/arrow_back_icon"
             android:background="@color/gray"/>
@@ -36,7 +37,7 @@
             android:layout_weight="0.7"
             android:fontFamily="@font/bebas_neue_regular"
             android:text="@string/Rutine"
-            android:textColor="@color/black"
+            android:textColor="@color/light_gray"
             android:textSize="40sp" />
 
         <TextView
@@ -47,7 +48,7 @@
             android:layout_weight="0.1"
             android:fontFamily="@font/bebas_neue_regular"
             android:text="@string/Gym"
-            android:textColor="@color/black"
+            android:textColor="@color/light_gray"
             android:textSize="40sp" />
 
     </LinearLayout>

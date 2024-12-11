@@ -10,7 +10,7 @@
     tools:context=".LoginFragment">
 
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/logo_login"
         android:layout_width="222dp"
         android:layout_height="222dp"
@@ -36,6 +36,7 @@
         android:paddingEnd="20dp"
         android:paddingBottom="10dp"
         android:textAlignment="textStart"
+        android:textColor="@color/Charcoal"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,6 +57,7 @@
         android:paddingEnd="30dp"
         android:paddingBottom="10dp"
         android:textAlignment="textStart"
+        android:textColor="@color/Charcoal"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,6 +83,8 @@
         android:layout_width="350dp"
         android:layout_height="45dp"
         android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:focusable="true"
         android:paddingTop="10dp"
         android:text="@string/QuestionRegister"
         android:textAlignment="center"

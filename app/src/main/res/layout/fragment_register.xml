@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".RegisterFragment">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/logo_Register"
         android:layout_width="222dp"
         android:layout_height="222dp"
@@ -27,13 +27,15 @@
         android:spinnerMode="dropdown"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo_Register"/>
+        app:layout_constraintTop_toBottomOf="@id/logo_Register"
+        tools:listitem="@layout/spinner_item"/>
 
     <EditText
         android:id="@+id/name_EditText_Register"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="312dp"
         android:layout_height="53dp"
+        android:textColor="@color/Charcoal"
         android:layout_marginTop="21dp"
         android:autofillHints="emailAddress"
         android:background="@drawable/gray_border_10dp"
@@ -53,6 +55,7 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="312dp"
         android:layout_height="53dp"
+        android:textColor="@color/Charcoal"
         android:layout_marginTop="21dp"
         android:autofillHints="emailAddress"
         android:background="@drawable/gray_border_10dp"
@@ -77,6 +80,7 @@
         android:background="@drawable/gray_border_10dp"
         android:hint="@string/Password"
         android:inputType="textPassword"
+        android:textColor="@color/Charcoal"
         android:padding="10dp"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
@@ -94,7 +98,8 @@
         android:layout_marginTop="26dp"
         android:autofillHints="password"
         android:background="@drawable/gray_border_10dp"
-        android:hint="@string/Password"
+        android:hint="@string/ConfirmPassword"
+        android:textColor="@color/Charcoal"
         android:inputType="textPassword"
         android:padding="10dp"
         android:paddingStart="20dp"
@@ -107,7 +112,7 @@
 
 
     <Button
-        android:id="@+id/confirm_Button_Loggin"
+        android:id="@+id/confirm_Button_Register"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"

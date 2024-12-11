@@ -92,7 +92,7 @@
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:paddingBottom="100dp"
-        android:text="@string/NameRoutine"
+        android:text="@string/DescriptionRoutine"
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
