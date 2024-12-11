@@ -23,8 +23,8 @@
             android:layout_marginTop="10dp"
             android:layout_weight="0.1"
             android:background="@color/gray"
-            android:contentDescription="@string/Menu_Icon"
-            android:src="@drawable/menu_ic"
+            android:contentDescription="@string/back"
+            android:src="@drawable/arrow_back_icon"
             app:tint="@color/light_gray" />
 
         <TextView
