@@ -4,12 +4,7 @@ class UsuariosModel(
     var name : String,
     var email : String,
     var password : String,
-    var category:String
+    var category:String,
+    var membresia : String
 ){
-}
-
-object UsuarioListModel{
-    val ususarios: List<UsuariosModel> = listOf(
-        UsuariosModel("Jean","asd","d112","Free")
-    )
 }

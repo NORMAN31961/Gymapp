@@ -9,14 +9,15 @@ import com.example.gym.databinding.ActivityItemsUsuariosBinding
 import com.example.gym.model.UsuariosModel
 
 
-class UsuarioAdapter(val usuario : List<UsuariosModel>): RecyclerView.Adapter<UsuarioAdapter.UsuarioViewHolder>() {
+class UsuarioAdapter(var usuario : List<UsuariosModel>): RecyclerView.Adapter<UsuarioAdapter.UsuarioViewHolder>() {
     class UsuarioViewHolder(view : View): RecyclerView.ViewHolder(view) {
         val binding = ActivityItemsUsuariosBinding.bind(view)
         fun inizializar(usuario: UsuariosModel){
             binding.name.text = usuario.name
-            binding.categori.text = usuario.category
+            binding.Categoria.text = usuario.category
             binding.email.text = usuario.email
             binding.password.text = usuario.password
+            binding.membresia.text = usuario.membresia
         }
     }
 
