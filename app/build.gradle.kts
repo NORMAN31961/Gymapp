@@ -33,7 +33,7 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-    viewBinding{
+    viewBinding {
         enable = true
     }
 }
@@ -49,4 +49,14 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    /*
+    *https://github.com/square/picasso
+    * *  */
+
+    implementation("com.squareup.picasso:picasso:2.8")
+
+    /*
+    * https://developer.android.com/jetpack/androidx/releases/recyclerview?hl=es-419
+    * */
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
 }

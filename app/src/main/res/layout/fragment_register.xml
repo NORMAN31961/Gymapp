@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterFragment">
+
+    <ImageView
+        android:id="@+id/logo_Register"
+        android:layout_width="222dp"
+        android:layout_height="222dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/Logo"
+        android:src="@drawable/logo_gym_goals"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_Experience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo_Register"/>
+
+    <EditText
+        android:id="@+id/name_EditText_Register"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="312dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="21dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/edit_text_border"
+        android:hint="@string/Name"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_Experience" />
+
+    <EditText
+        android:id="@+id/email_EditText_Login"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="312dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="21dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/edit_text_border"
+        android:hint="@string/Email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_EditText_Register" />
+
+    <EditText
+        android:id="@+id/password_EditText_Register"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="312dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="26dp"
+        android:autofillHints="password"
+        android:background="@drawable/edit_text_border"
+        android:hint="@string/Password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_EditText_Login" />
+
+    <EditText
+        android:id="@+id/confirm_password_EditText_Register"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="312dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="26dp"
+        android:autofillHints="password"
+        android:background="@drawable/edit_text_border"
+        android:hint="@string/Password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_EditText_Register" />
+
+
+    <Button
+        android:id="@+id/confirm_Button_Loggin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/btn_orange_border"
+        android:text="@string/Confirm"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/confirm_password_EditText_Register"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

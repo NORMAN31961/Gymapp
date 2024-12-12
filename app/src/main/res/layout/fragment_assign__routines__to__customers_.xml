@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/bar_routine"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/gray"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18dp"
+            android:layout_weight="0.1"
+            android:contentDescription="@string/Menu_Icon"
+            android:src="@drawable/arrow_back_icon" />
+
+        <TextView
+            android:id="@+id/text_view_routine_title"
+            style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/bebas_neue_regular"
+            android:text="@string/AssignRoutine"
+            android:textColor="@color/black"
+            android:textSize="35sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewExercises"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            tools:listitem="@layout/item_customer_check_box" />
+
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="end"
+        android:layout_margin="15dp"
+        android:background="@drawable/btn_orange_forward_border"
+        android:contentDescription="@string/next"
+        android:scaleType="center"
+        android:src="@drawable/arrow_forward_icon" />
+
+</LinearLayout>

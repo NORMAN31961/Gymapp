@@ -2,8 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="Gris">#727171</color>
-    <color name="SearchBar">#D9D9D9</color>
-    <color name="Goals">#7A7A8F</color>
-    <color name="rutinacolor">#D9D9D9</color>
+    <color name="gray">#727171</color>
+    <color name="light_gray">#D9D9D9</color>
+    <color name="slate_gray_transparent_50">#807A7A8F</color>
+    <color name="slate_gray_transparent_60">#667A7A8F</color>
+    <color name="slate_gray_transparent_70">#4C7A7A8F</color>
+    <color name="slate_gray">#807A7A8F</color>
+    <color name="Orange">#F28911</color>
+    <color name="Blue">#0C84F4</color>
 </resources>
