@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/burguer_menu_header"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="@color/gray"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/burguer_menu_logo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@mipmap/logo_gym_goals" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue_regular"
+        android:text="@string/GymGoals"
+        android:textSize="30sp"/>
+
+</LinearLayout>

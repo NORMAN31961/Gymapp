@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".fragments.AsiggnNameRoutineFragment">
+
+    <LinearLayout
+        android:id="@+id/bar_routine_frag_assig_days"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/gray"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back_icon"
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.1"
+            android:background="@color/gray"
+            android:contentDescription="@string/Menu_Icon"
+            android:src="@drawable/arrow_back_icon"
+            app:tint="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/text_view_routine_title"
+            style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/bebas_neue_regular"
+            android:text="@string/Rutine"
+            android:textColor="@color/light_gray"
+            android:textSize="35sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvNameRoutine"
+        style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bebas_neue_regular"
+        android:text="@string/NameRoutine"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bar_routine_frag_assig_days" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_StreakDays_Container_View_Home_Customer"
+        android:name="com.example.gym.fragments.StreakDaysFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNameRoutine"
+        tools:layout="@layout/fragment_streak_days" />
+
+    <TextView
+        android:id="@+id/tvDescriptionRoutine"
+        style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bebas_neue_regular"
+        android:text="@string/DescriptionRoutine"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_StreakDays_Container_View_Home_Customer" />
+
+    <TextView
+        android:id="@+id/tv_description_routine_frag_assig_days"
+        android:layout_width="312dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/gray_border_12dp"
+        android:fontFamily="@font/bebas_neue_regular"
+        android:padding="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="100dp"
+        android:text="@string/DescriptionRoutine"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescriptionRoutine" />
+
+    <ImageButton
+        android:id="@+id/btn_Assign_Routine_frag_assig_days"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_orange_forward_border"
+        android:contentDescription="@string/next"
+        android:scaleType="center"
+        android:src="@drawable/arrow_forward_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

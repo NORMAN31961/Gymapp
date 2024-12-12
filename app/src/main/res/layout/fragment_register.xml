@@ -6,9 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RegisterFragment">
+    tools:context=".fragments.RegisterFragment">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/logo_Register"
         android:layout_width="222dp"
         android:layout_height="222dp"
@@ -17,7 +17,7 @@
         android:src="@drawable/logo_gym_goals"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <Spinner
         android:id="@+id/spinner_Experience"
@@ -27,16 +27,18 @@
         android:spinnerMode="dropdown"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo_Register"/>
+        app:layout_constraintTop_toBottomOf="@id/logo_Register"
+        tools:listitem="@layout/spinner_item"/>
 
     <EditText
         android:id="@+id/name_EditText_Register"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="312dp"
         android:layout_height="53dp"
+        android:textColor="@color/Charcoal"
         android:layout_marginTop="21dp"
         android:autofillHints="emailAddress"
-        android:background="@drawable/edit_text_border"
+        android:background="@drawable/gray_border_10dp"
         android:hint="@string/Name"
         android:inputType="textEmailAddress"
         android:padding="10dp"
@@ -53,9 +55,10 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="312dp"
         android:layout_height="53dp"
+        android:textColor="@color/Charcoal"
         android:layout_marginTop="21dp"
         android:autofillHints="emailAddress"
-        android:background="@drawable/edit_text_border"
+        android:background="@drawable/gray_border_10dp"
         android:hint="@string/Email"
         android:inputType="textEmailAddress"
         android:padding="10dp"
@@ -74,9 +77,10 @@
         android:layout_height="53dp"
         android:layout_marginTop="26dp"
         android:autofillHints="password"
-        android:background="@drawable/edit_text_border"
+        android:background="@drawable/gray_border_10dp"
         android:hint="@string/Password"
         android:inputType="textPassword"
+        android:textColor="@color/Charcoal"
         android:padding="10dp"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
@@ -93,8 +97,9 @@
         android:layout_height="53dp"
         android:layout_marginTop="26dp"
         android:autofillHints="password"
-        android:background="@drawable/edit_text_border"
-        android:hint="@string/Password"
+        android:background="@drawable/gray_border_10dp"
+        android:hint="@string/ConfirmPassword"
+        android:textColor="@color/Charcoal"
         android:inputType="textPassword"
         android:padding="10dp"
         android:paddingStart="20dp"
@@ -107,7 +112,7 @@
 
 
     <Button
-        android:id="@+id/confirm_Button_Loggin"
+        android:id="@+id/confirm_Button_Register"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"

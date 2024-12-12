@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_gray"
-    tools:context=".AsiggnNameRoutineFragment">
+    tools:context=".fragments.AsiggnNameRoutineFragment">
 
     <LinearLayout
         android:id="@+id/bar_routine"
@@ -17,15 +17,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/back_icon"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="0.1"
+            android:background="@color/gray"
             android:contentDescription="@string/Menu_Icon"
-            android:src="@drawable/arrow_back_icon" />
+            android:src="@drawable/arrow_back_icon"
+            app:tint="@color/light_gray" />
 
         <TextView
             android:id="@+id/text_view_routine_title"
@@ -35,7 +37,7 @@
             android:layout_weight="0.7"
             android:fontFamily="@font/bebas_neue_regular"
             android:text="@string/Rutine"
-            android:textColor="@color/black"
+            android:textColor="@color/light_gray"
             android:textSize="35sp" />
 
     </LinearLayout>
@@ -45,56 +47,92 @@
         style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:layout_weight="0.7"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/bebas_neue_regular"
         android:text="@string/NameRoutine"
         android:textColor="@color/black"
         android:textSize="35sp"
-        app:layout_constraintStart_toStartOf="@id/EditText_name_routine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bar_routine" />
 
     <EditText
         android:id="@+id/EditText_name_routine"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="312dp"
         android:layout_height="53dp"
-        android:layout_marginTop="76dp"
-        android:autofillHints="emailAddress"
-        android:background="@drawable/edit_text_border"
-        android:hint="@string/Email"
-        android:inputType="textEmailAddress"
+        android:layout_marginTop="10dp"
+        android:autofillHints=""
+        android:background="@drawable/gray_border_12dp"
+        android:fontFamily="@font/bebas_neue_regular"
+        android:hint="@string/NameRoutine"
+        android:inputType="text"
         android:padding="9dp"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:paddingBottom="10dp"
         android:textAlignment="textStart"
+        android:textColorHint="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bar_routine" />
+        app:layout_constraintTop_toBottomOf="@id/tvNameRoutine" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_StreakDays_Container_View_Home_Customer"
-        android:name="com.example.gym.StreakDaysFragment"
+        android:name="com.example.gym.fragments.StreakDaysFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/EditText_name_routine" />
+        app:layout_constraintTop_toBottomOf="@id/EditText_name_routine"
+        tools:layout="@layout/fragment_streak_days" />
+
+    <TextView
+        android:id="@+id/tvDescriptionRoutine"
+        style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bebas_neue_regular"
+        android:text="@string/DescriptionRoutine"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_StreakDays_Container_View_Home_Customer" />
+
+    <EditText
+        android:id="@+id/edit_text_description_routine"
+        android:layout_width="312dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="90dp"
+        android:autofillHints=""
+        android:background="@drawable/gray_border_12dp"
+        android:fontFamily="@font/bebas_neue_regular"
+        android:hint="@string/DescriptionRoutine"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescriptionRoutine" />
 
     <ImageButton
-        android:id="@+id/btnNext"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:id="@+id/btnCompleteCreateRoutine"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_margin="20dp"
         android:background="@drawable/btn_orange_forward_border"
         android:contentDescription="@string/next"
         android:scaleType="center"
         android:src="@drawable/arrow_forward_icon"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

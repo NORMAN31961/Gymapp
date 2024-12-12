@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/light_gray"
     android:orientation="vertical"
-
-    tools:context=".ExcerciseFragment">
+    tools:context=".fragments.ExcerciseFragment">
 
 
     <LinearLayout
@@ -19,15 +18,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/back_icon"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="45dp"
+            android:layout_height="50dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="0.1"
             android:contentDescription="@string/Menu_Icon"
-            android:src="@drawable/arrow_back_icon" />
+            android:src="@drawable/arrow_back_icon"
+            android:background="@color/gray"
+            app:tint="@color/light_gray"/>
 
         <TextView
             android:id="@+id/text_view_routine_title"
@@ -37,7 +38,7 @@
             android:layout_weight="0.7"
             android:fontFamily="@font/bebas_neue_regular"
             android:text="@string/Excercise"
-            android:textColor="@color/black"
+            android:textColor="@color/light_gray"
             android:textSize="40sp" />
 
 

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".fragments.RoutineFragment">
+
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/gray"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.1"
+            android:contentDescription="@string/Menu_Icon"
+            android:src="@drawable/menu_ic"
+            app:tint="@color/light_gray" />
+
+        <EditText
+            android:id="@+id/search_Bar_Home_Customer"
+            style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.8"
+            android:autofillHints=""
+            android:fontFamily="@font/bebas_neue_regular"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/light_gray"
+            android:hint="@string/Search"
+            android:textColorHint="@color/black"
+            android:textSize="20sp"
+            android:inputType="text" />
+
+        <ImageButton
+            android:id="@+id/back_icon"
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.1"
+            android:background="@color/gray"
+            android:contentDescription="@string/Search_Icon"
+            android:src="@drawable/search_icon"
+            app:tint="@color/light_gray" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Gym_Goals_Title_Home_Customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/bebas_neue_regular"
+        android:text="@string/GymGoals"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/search_bar"
+        app:layout_constraintStart_toStartOf="@id/search_bar" />
+
+    <ScrollView
+        android:id="@+id/Scroll_View_Routine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Gym_Goals_Title_Home_Customer">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_routine_exercise"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            tools:listitem="@layout/item_excercise" />
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/button_init_rutine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/btn_orange_border"
+        android:text="@string/AssignRoutine"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Scroll_View_Routine"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
