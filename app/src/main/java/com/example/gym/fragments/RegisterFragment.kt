@@ -29,6 +29,13 @@ class RegisterFragment : Fragment() {
 
     private fun init() {
         event_Register()
+        event_Back_Button()
+    }
+
+    private fun event_Back_Button() {
+        binding.backIcon.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
     }
 
     private fun event_Register() {

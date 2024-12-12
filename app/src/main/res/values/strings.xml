@@ -38,7 +38,7 @@
     <string name="Rutine_Completed">¡FELICIDADES!!!!\nACABASTE LA RUTINA DEL\nDÍA DE HOY</string>
     <string name="SelectedExcercise">Seleccionar Ejercicio</string>
     <string name="Customer">Cliente</string>
-    <string name="AssignRoutine">Asignar rutina</string>
+    <string name="AssignButton">Asignar</string>
     <string name="NameRoutine">Nombre de la rutina</string>
     <string name="AddedRoutine">Rutina Agregada!!</string>
     <string name="DescriptionRoutine">Descripción de la Rutina</string>

@@ -5,24 +5,47 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.gym.CoachActivity
 import com.example.gym.R
+import com.example.gym.databinding.FragmentAddExcerciseToRoutineBinding
 
 
 class Add_Excercise_to_Routine_Fragment : Fragment() {
 
-
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//
-//    }
+    private var _binding: FragmentAddExcerciseToRoutineBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add__excercise_to__routine_, container, false)
+        _binding = FragmentAddExcerciseToRoutineBinding.inflate(inflater, container, false)
+        return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        init()
+
+    }
+
+    private fun init() {
+        event_Back_Button()
+        event_Next_Button()
+    }
+
+    private fun event_Back_Button() {
+        binding.backButton.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
+    }
+
+    private fun event_Next_Button() {
+        binding.btnNext.setOnClickListener {
+            (activity as CoachActivity).replaceFragment(Assign_Routines_To_Customers_Fragment())
+        }
+    }
+
 
 
 }

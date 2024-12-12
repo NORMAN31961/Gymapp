@@ -10,6 +10,19 @@
     tools:context=".fragments.LoginFragment">
 
 
+    <ImageButton
+        android:id="@+id/back_icon"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.1"
+        android:contentDescription="@string/Menu_Icon"
+        android:src="@drawable/arrow_back_icon"
+        app:tint="@color/gray"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/logo_login"
         android:layout_width="222dp"
@@ -28,6 +41,7 @@
         android:layout_height="53dp"
         android:layout_marginTop="76dp"
         android:autofillHints="emailAddress"
+        android:textColorHint="@color/Charcoal"
         android:background="@drawable/gray_border_10dp"
         android:hint="@string/Email"
         android:inputType="textEmailAddress"
@@ -50,6 +64,7 @@
         android:layout_marginTop="26dp"
         android:autofillHints="password"
         android:background="@drawable/gray_border_10dp"
+        android:textColorHint="@color/Charcoal"
         android:hint="@string/Password"
         android:inputType="textPassword"
         android:padding="9dp"
@@ -65,7 +80,7 @@
 
 
     <Button
-        android:id="@+id/confirm_Button_Loggin"
+        android:id="@+id/confirm_Button_Login"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="160dp"
@@ -78,20 +93,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/email_EditText_Login" />
 
-    <TextView
-        android:id="@+id/register_Link_Login"
-        android:layout_width="350dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="30dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:paddingTop="10dp"
+    <Button
+        android:id="@+id/register_Button_Login"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_orange_border"
         android:text="@string/QuestionRegister"
-        android:textAlignment="center"
-        android:textColor="@color/Blue"
+        android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:backgroundTint="@null"
+        app:layout_constraintTop_toBottomOf="@id/confirm_Button_Login"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/confirm_Button_Loggin" />
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

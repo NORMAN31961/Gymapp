@@ -18,16 +18,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/menu_icon"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+        <ImageButton
+            android:id="@+id/back_button_profile"
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_weight="0.1"
             android:contentDescription="@string/Menu_Icon"
             android:src="@drawable/arrow_back_icon"
-            app:tint="@color/light_gray" />
-
+            android:background="@color/gray"
+            app:tint="@color/light_gray"/>
         <TextView
             android:id="@+id/text_view_routine_title"
             style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
@@ -40,7 +41,7 @@
             android:textSize="35sp" />
 
         <ImageButton
-            android:id="@+id/back_icon"
+            android:id="@+id/logut_button"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="10dp"

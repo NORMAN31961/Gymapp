@@ -1,64 +1,61 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/light_gray"
-    android:orientation="vertical">
+    android:background="@color/light_gray">
 
     <LinearLayout
         android:id="@+id/bar_routine"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="@color/gray"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/back_button"
+            android:id="@+id/back_icon"
             android:layout_width="45dp"
             android:layout_height="50dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_weight="0.1"
+            app:tint="@color/light_gray"
             android:contentDescription="@string/Menu_Icon"
             android:src="@drawable/arrow_back_icon"
-            android:background="@color/gray"
-            app:tint="@color/light_gray"/>
+            android:background="@color/gray"/>
 
         <TextView
             android:id="@+id/text_view_routine_title"
             style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
             android:layout_width="wrap_content"
             android:layout_height="70dp"
-            android:layout_weight="0.7"
             android:fontFamily="@font/bebas_neue_regular"
-            android:text="@string/AssignRoutine"
+            android:text="@string/Rutine"
             android:textColor="@color/light_gray"
-            android:textSize="35sp" />
+            android:textSize="40sp" />
 
     </LinearLayout>
 
+
     <ScrollView
+        android:id="@+id/Scroll_View_Routine"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bar_routine">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewExercises"
+            android:id="@+id/recycler_view_routine_exercise"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            tools:listitem="@layout/item_customer_check_box" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bar_routine"
+            tools:listitem="@layout/item_excercise" />
 
     </ScrollView>
 
-    <ImageButton
-        android:id="@+id/btnNext"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_gravity="end"
-        android:layout_margin="15dp"
-        android:background="@drawable/btn_orange_forward_border"
-        android:contentDescription="@string/next"
-        android:scaleType="center"
-        android:src="@drawable/arrow_forward_icon" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
