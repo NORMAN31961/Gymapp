@@ -32,7 +32,7 @@
             android:layout_height="70dp"
             android:layout_weight="0.7"
             android:fontFamily="@font/bebas_neue_regular"
-            android:text="@string/AssignRoutine"
+            android:text="@string/AssignButton"
             android:textColor="@color/light_gray"
             android:textSize="35sp" />
 

@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.gym.CoachActivity
-import com.example.gym.R
 import com.example.gym.databinding.AlertDialogCreateRoutineBinding
 import com.example.gym.databinding.FragmentAsiggnNameRoutineBinding
 

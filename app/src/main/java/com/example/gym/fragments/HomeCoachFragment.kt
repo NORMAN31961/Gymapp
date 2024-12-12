@@ -10,7 +10,6 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.gym.CoachActivity
-import com.example.gym.MainActivity
 import com.example.gym.R
 import com.example.gym.databinding.FragmentHomeCoachBinding
 

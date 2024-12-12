@@ -20,6 +20,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_weight="0.1"
+            android:contentDescription="@string/back"
             android:src="@drawable/arrow_back_icon"
             android:background="@color/gray"
             app:tint="@color/light_gray"/>
