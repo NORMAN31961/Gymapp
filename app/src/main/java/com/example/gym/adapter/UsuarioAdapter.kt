@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gym.R
 import com.example.gym.databinding.ActivityItemsUsuariosBinding
-import com.example.gym.databinding.ActivityMainBinding
-import com.example.gym.models.UsuariosModel
+import com.example.gym.model.UsuariosModel
+
 
 class UsuarioAdapter(val usuario : List<UsuariosModel>): RecyclerView.Adapter<UsuarioAdapter.UsuarioViewHolder>() {
     class UsuarioViewHolder(view : View): RecyclerView.ViewHolder(view) {

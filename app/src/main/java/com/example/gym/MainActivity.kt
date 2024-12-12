@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.gym.adapter.UsuarioAdapter
 import com.example.gym.databinding.ActivityMainBinding
+import com.example.gym.models.ViewModelUsuario
 
 
 class MainActivity : AppCompatActivity() {
