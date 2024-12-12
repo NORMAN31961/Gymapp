@@ -13,11 +13,11 @@ class UsuarioAdapter(var usuario : List<UsuariosModel>): RecyclerView.Adapter<Us
     class UsuarioViewHolder(view : View): RecyclerView.ViewHolder(view) {
         val binding = ActivityItemsUsuariosBinding.bind(view)
         fun inizializar(usuario: UsuariosModel){
-            binding.name.text = usuario.name
-            binding.Categoria.text = usuario.category
-            binding.email.text = usuario.email
-            binding.password.text = usuario.password
-            binding.membresia.text = usuario.membresia
+            binding.name.text = usuario.Nombre
+            binding.Categoria.text = usuario.Categoria
+            binding.email.text = usuario.Corre
+            binding.password.text = usuario.Contrasena
+            binding.membresia.text = usuario.Membresia
         }
     }
 
