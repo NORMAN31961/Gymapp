@@ -1,4 +1,4 @@
-import com.example.gym.models.UsuariosModel
+import com.example.gym.model.UsuariosModel
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST

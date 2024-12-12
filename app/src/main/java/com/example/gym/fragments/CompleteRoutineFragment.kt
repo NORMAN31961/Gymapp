@@ -1,22 +1,18 @@
-package com.example.gym
+package com.example.gym.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import com.example.gym.MainActivity
 import com.example.gym.databinding.FragmentCompleteRoutineBinding
-
 
 class CompleteRoutineFragment : Fragment() {
 
     private var _binding: FragmentCompleteRoutineBinding? = null
     private val binding get() = _binding!!
 
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//
-//    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

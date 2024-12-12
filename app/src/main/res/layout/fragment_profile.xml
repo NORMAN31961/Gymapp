@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_gray"
-    tools:context=".ProfileFragment">
+    tools:context=".fragments.ProfileFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout_Profile"
@@ -76,7 +76,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_StreakDays_Container_View_Home_Customer"
-        android:name="com.example.gym.StreakDaysFragment"
+        android:name="com.example.gym.fragments.StreakDaysFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"

@@ -1,4 +1,4 @@
-package com.example.gym.models
+package com.example.gym.model
 
 class UsuariosModel(
     var name : String,

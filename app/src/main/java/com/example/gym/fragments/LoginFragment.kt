@@ -1,13 +1,13 @@
-package com.example.gym
+package com.example.gym.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.fragment.app.Fragment
+import com.example.gym.MainActivity
+import com.example.gym.R
 import com.example.gym.databinding.FragmentLoginBinding
-
 
 class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null

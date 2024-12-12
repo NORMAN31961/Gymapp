@@ -1,12 +1,12 @@
-package com.example.gym
+package com.example.gym.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import com.example.gym.MainActivity
 import com.example.gym.databinding.FragmentRegisterBinding
-
 
 class RegisterFragment : Fragment() {
 

@@ -78,7 +78,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragment_StreakDays_Container_View_Home_Customer"
-            android:name="com.example.gym.StreakDaysFragment"
+            android:name="com.example.gym.fragments.StreakDaysFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
