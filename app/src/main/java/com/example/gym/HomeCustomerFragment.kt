@@ -6,10 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.activityViewModels
 import com.example.gym.databinding.FragmentHomeCustomerBinding
+import com.example.gym.models.ViewModelUsuario
 
 class HomeCustomerFragment : Fragment() {
 

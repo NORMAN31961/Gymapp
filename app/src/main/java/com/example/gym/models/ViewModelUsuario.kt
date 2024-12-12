@@ -1,8 +1,9 @@
 package com.example.gym.models
 
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 
-class ViewmodelUsuarios {
+class ViewModelUsuario : ViewModel() {
     private val _datalistUsuario: MutableLiveData<MutableList<UsuariosModel>> =
         MutableLiveData(mutableListOf())
 
