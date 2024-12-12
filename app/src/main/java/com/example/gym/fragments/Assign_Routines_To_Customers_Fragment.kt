@@ -41,7 +41,7 @@ class Assign_Routines_To_Customers_Fragment : Fragment() {
     }
     private fun event_Next_Button() {
         binding.btnNext.setOnClickListener {
-            (activity as CoachActivity).replaceFragment(AssignNameRoutineFragment())
+            (activity as CoachActivity).replaceFragment(AssignDaysRoutineFragment())
         }
     }
 

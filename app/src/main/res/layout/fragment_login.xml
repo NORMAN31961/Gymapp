@@ -19,6 +19,7 @@
         android:layout_weight="0.1"
         android:contentDescription="@string/Menu_Icon"
         android:src="@drawable/arrow_back_icon"
+        android:background="@color/light_gray"
         app:tint="@color/gray"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>

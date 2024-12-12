@@ -23,7 +23,11 @@ class LoginFragment : Fragment() {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
     }
-
+    private fun event_Back_Button() {
+        binding.backIcon.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
@@ -35,11 +39,7 @@ class LoginFragment : Fragment() {
         event_Back_Button()
     }
 
-    private fun event_Back_Button() {
-        binding.backIcon.setOnClickListener {
-            requireActivity().onBackPressedDispatcher.onBackPressed()
-        }
-    }
+
     private fun launchCoachActivity() {
         val intent = Intent(requireContext(), CoachActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
