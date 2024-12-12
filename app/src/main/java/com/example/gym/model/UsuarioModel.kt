@@ -7,3 +7,9 @@ class UsuariosModel(
     var category:String
 ){
 }
+
+object UsuarioListModel{
+    val ususarios: List<UsuariosModel> = listOf(
+        UsuariosModel("Jean","asd","d112","Free")
+    )
+}
