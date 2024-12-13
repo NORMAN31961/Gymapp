@@ -1,12 +1,13 @@
 package com.example.gym.fragments
 
+import android.R
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.gym.MainActivity
@@ -43,6 +44,7 @@ class RegisterFragment : Fragment() {
     }
 
     private fun init() {
+        llenarSpinner()
         event_Register()
         event_Back_Button()
         binding.confirmButtonRegister.setOnClickListener(){
@@ -50,12 +52,23 @@ class RegisterFragment : Fragment() {
         }
     }
 
+    private fun llenarSpinner() {
+        val opciones = listOf("Principiante", "Intermedio", "Avanzado")
+        val adapter = ArrayAdapter(
+            requireContext(),
+            R.layout.simple_spinner_item,
+            opciones
+        )
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.spinnerExperience.adapter = adapter
+    }
+
     private fun ObetenerDatosUsuarios():UsuariosModel {
         return UsuariosModel(
             binding.nameEditTextRegister.text.toString(),
             binding.emailEditTextLogin.text.toString(),
             binding.passwordEditTextRegister.text.toString(),
-            "Principiante",
+            binding.spinnerExperience.selectedItem.toString(),
             "Free"
 
         )
