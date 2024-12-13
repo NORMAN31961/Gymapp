@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.gym.MainActivity
+import com.example.gym.adapter.EjercicioAdapter
 import com.example.gym.databinding.FragmentRoutineBinding
 import com.example.gym.model.EjercicioViewModel
 import conexiondb
@@ -23,16 +25,18 @@ class RoutineFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val ejercicioViewModel = EjercicioViewModel()
+    lateinit var EjercicioAdapter: EjercicioAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
     }
     private fun init(){
+        initRecyclerView()
         event_Back_Button()
         event_Change_Place()
-        event_Init_Routine()
         listar_Ejercicio()
+        event_Init_Routine()
     }
 
     override fun onCreateView(
@@ -76,7 +80,7 @@ class RoutineFragment : Fragment() {
     private fun listar_Ejercicio(){
         CoroutineScope(Dispatchers.IO).launch{
             try {
-                val call = getRetrofit().create(conexiondb::class.java).Consultarjercicios()
+                val call = getRetrofit().create(conexiondb::class.java).ConsultarEjercicio()
                 if(call.isSuccessful && call.body() != null){
                     withContext(Dispatchers.Main){
                       ejercicioViewModel.addEjercicioList(call.body()!!.toMutableList())
@@ -88,8 +92,13 @@ class RoutineFragment : Fragment() {
                 Log.e("dap", "Error No se pudo Conectar a la base de datos", e)
             }
         }
+    }
 
-
+    private fun initRecyclerView(){
+        val recyclerView = binding.recyclerViewRoutineExercise
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        EjercicioAdapter = EjercicioAdapter(ejercicioViewModel.datalistEjercicio.value?: mutableListOf())
+        recyclerView.adapter = EjercicioAdapter
     }
 
 

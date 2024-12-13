@@ -15,5 +15,5 @@ interface conexiondb {
     suspend fun InstarUsuarios(@Body mUsua : UsuariosModel): retrofit2.Response<UsuariosModel>
 
     @GET("/consultarEjercicio")
-    suspend fun Consultarjercicios(): retrofit2.Response<List<EjercicioModel>>
+    suspend fun ConsultarEjercicio(): retrofit2.Response<List<EjercicioModel>>
 }

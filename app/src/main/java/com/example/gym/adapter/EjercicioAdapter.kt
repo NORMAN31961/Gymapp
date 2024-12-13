@@ -9,12 +9,13 @@ import com.example.gym.databinding.ItemExcerciseBinding
 import com.example.gym.model.EjercicioModel
 
 
-class EjercicioAdapter (var ejerciciosList : List<EjercicioModel>): RecyclerView.Adapter<EjercicioAdapter.EjercicioViewHolder>() {
+class EjercicioAdapter (var ejerciciosList : List<EjercicioModel> ): RecyclerView.Adapter<EjercicioAdapter.EjercicioViewHolder>() {
 
     class EjercicioViewHolder(view : View): RecyclerView.ViewHolder(view) {
         val binding = ItemExcerciseBinding.bind(view)
+
         fun inizializar(ejercicio: EjercicioModel){
-            binding.buttonExcercise.text = ejercicio.Nombre
+            binding.itemTvExcercise.text = ejercicio.Nombre
         }
     }
 
