@@ -1,17 +1,28 @@
 package com.example.gym.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.gym.MainActivity
 import com.example.gym.databinding.FragmentRoutineBinding
+import com.example.gym.model.EjercicioViewModel
+import conexiondb
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class RoutineFragment : Fragment() {
 
     private var _binding: FragmentRoutineBinding? = null
     private val binding get() = _binding!!
+
+    private val ejercicioViewModel = EjercicioViewModel()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -21,12 +32,13 @@ class RoutineFragment : Fragment() {
         event_Back_Button()
         event_Change_Place()
         event_Init_Routine()
+        listar_Ejercicio()
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentRoutineBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -52,6 +64,32 @@ class RoutineFragment : Fragment() {
         binding.buttonInitRutine.setOnClickListener {
             (activity as MainActivity).replaceFragment(ExcerciseFragment())
         }
+    }
+
+    fun getRetrofit(): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(conexiondb.url)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
+
+    private fun listar_Ejercicio(){
+        CoroutineScope(Dispatchers.IO).launch{
+            try {
+                val call = getRetrofit().create(conexiondb::class.java).Consultarjercicios()
+                if(call.isSuccessful && call.body() != null){
+                    withContext(Dispatchers.Main){
+                      ejercicioViewModel.addEjercicioList(call.body()!!.toMutableList())
+                    }
+                }else{
+                    Log.e("dap", "Error no se encontro informacion")
+                }
+            }catch (e: Exception){
+                Log.e("dap", "Error No se pudo Conectar a la base de datos", e)
+            }
+        }
+
+
     }
 
 
