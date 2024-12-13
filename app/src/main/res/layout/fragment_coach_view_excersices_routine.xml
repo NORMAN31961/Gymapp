@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_gray"
-    tools:context=".fragments.RoutineFragment">
+    android:background="@color/light_gray">
 
     <LinearLayout
-        android:id="@+id/bar_coach_view_routines"
+        android:id="@+id/bar_routine"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="@color/gray"
@@ -18,73 +17,45 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/back_Button"
+            android:id="@+id/back_icon"
             android:layout_width="45dp"
             android:layout_height="50dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_weight="0.1"
-            android:background="@color/gray"
+            app:tint="@color/light_gray"
             android:contentDescription="@string/Menu_Icon"
             android:src="@drawable/arrow_back_icon"
-            app:tint="@color/light_gray" />
+            android:background="@color/gray"/>
 
         <TextView
             android:id="@+id/text_view_routine_title"
             style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
             android:layout_width="wrap_content"
             android:layout_height="70dp"
-            android:layout_weight="0.7"
             android:fontFamily="@font/bebas_neue_regular"
             android:text="@string/Rutine"
             android:textColor="@color/light_gray"
-            android:textSize="35sp" />
+            android:textSize="40sp" />
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/Gym_Goals_Title_Home_Customer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/bebas_neue_regular"
-        android:text="@string/GymGoals"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bar_coach_view_routines"/>
 
     <ScrollView
         android:id="@+id/Scroll_View_Routine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Gym_Goals_Title_Home_Customer">
-
+        app:layout_constraintTop_toBottomOf="@+id/bar_routine">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_routine_exercise"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            tools:listitem="@layout/item_routine_check_box" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bar_routine"
+            tools:listitem="@layout/item_excercise" />
 
     </ScrollView>
 
-
-    <Button
-        android:id="@+id/button_Assign_rutine"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="25dp"
-        android:background="@drawable/btn_orange_border"
-        android:text="@string/AssignButton"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:backgroundTint="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
