@@ -107,26 +107,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/email_EditText_Login" />
 
-    <EditText
-        android:id="@+id/confirm_password_EditText_Register"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="312dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="26dp"
-        android:autofillHints="password"
-        android:background="@drawable/gray_border_10dp"
-        android:hint="@string/ConfirmPassword"
-        android:textColor="@color/Charcoal"
-        android:inputType="textPassword"
-        android:textColorHint="@color/Charcoal"
-        android:padding="10dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textAlignment="textStart"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password_EditText_Register" />
 
 
     <Button
@@ -141,7 +121,7 @@
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/confirm_password_EditText_Register"/>
+        app:layout_constraintTop_toBottomOf="@id/password_EditText_Register"/>
 
 
 
