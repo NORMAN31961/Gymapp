@@ -47,9 +47,6 @@ class RegisterFragment : Fragment() {
         llenarSpinner()
         event_Register()
         event_Back_Button()
-        binding.confirmButtonRegister.setOnClickListener(){
-            insertarUsuarios(ObetenerDatosUsuarios())
-        }
     }
 
     private fun llenarSpinner() {
@@ -105,6 +102,7 @@ class RegisterFragment : Fragment() {
 
     private fun event_Register() {
         binding.confirmButtonRegister.setOnClickListener {
+            insertarUsuarios(ObetenerDatosUsuarios())
             (activity as MainActivity).replaceFragment(LoginFragment())
         }
     }
