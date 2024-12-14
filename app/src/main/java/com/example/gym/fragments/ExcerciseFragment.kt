@@ -1,20 +1,24 @@
 package com.example.gym.fragments
 
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.gym.MainActivity
 import com.example.gym.databinding.FragmentExcerciseBinding
 import com.example.gym.model.EjercicioModel
 import com.google.gson.Gson
-import com.squareup.picasso.Picasso
+import java.net.URI
 
 class ExcerciseFragment : Fragment() {
     private var _binding : FragmentExcerciseBinding? = null
     private val binding get() = _binding!!
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -45,15 +49,16 @@ class ExcerciseFragment : Fragment() {
     private fun asignarVariablesVisualizar(ejercicio: EjercicioModel) {
         binding.textViewExcerciseTitle.setText(ejercicio.Nombre)
         binding.tvInstructions.setText(ejercicio.Descripcion)
-        Picasso.get()
+        Glide.with(requireContext())
             .load(ejercicio.Url_Gif)
             .into(binding.gifImage)
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentExcerciseBinding.inflate(inflater, container, false)
         return binding.root
     }

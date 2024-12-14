@@ -1,89 +1,92 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_gray"
-    android:orientation="vertical"
     tools:context=".fragments.ExcerciseFragment">
 
-
     <LinearLayout
-        android:id="@+id/bar_routine"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@color/gray"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/bar_routine"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/gray"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/back_icon"
+                android:layout_width="45dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.1"
+                android:background="@color/gray"
+                android:contentDescription="@string/Menu_Icon"
+                android:src="@drawable/arrow_back_icon"
+                app:tint="@color/light_gray" />
+
+            <TextView
+                android:id="@+id/text_view_Excercise_title"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_weight="0.7"
+                android:fontFamily="@font/bebas_neue_regular"
+                android:text="@string/Excercise"
+                android:textColor="@color/light_gray"
+                android:textSize="40sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/gifImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/gray_border_12dp"
+                android:contentDescription="@string/gif_placeholder"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/sample_gif" />
+
+            <TextView
+                android:id="@+id/tvInstructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/gray_border_10dp"
+                android:padding="8dp"
+                android:text="@string/Instructions"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
 
         <ImageButton
-            android:id="@+id/back_icon"
-            android:layout_width="45dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_weight="0.1"
-            android:contentDescription="@string/Menu_Icon"
-            android:src="@drawable/arrow_back_icon"
-            android:background="@color/gray"
-            app:tint="@color/light_gray"/>
-
-        <TextView
-            android:id="@+id/text_view_Excercise_title"
-            style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:layout_weight="0.7"
-            android:fontFamily="@font/bebas_neue_regular"
-            android:text="@string/Excercise"
-            android:textColor="@color/light_gray"
-            android:textSize="40sp" />
-
-
+            android:id="@+id/btnNext"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="end"
+            android:layout_margin="8dp"
+            android:background="@drawable/btn_orange_forward_border"
+            android:contentDescription="@string/next"
+            android:scaleType="center"
+            android:src="@drawable/arrow_forward_icon" />
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <ImageView
-            android:id="@+id/gifImage"
-            android:layout_width="match_parent"
-            android:background="@drawable/gray_border_12dp"
-            android:layout_height="200dp"
-            android:contentDescription="@string/gif_placeholder"
-            android:scaleType="centerInside"
-            android:adjustViewBounds="true"
-            app:srcCompat="@drawable/sample_gif" />
-
-        <TextView
-            android:id="@+id/tvInstructions"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/gray_border_10dp"
-            android:padding="8dp"
-            android:text="@string/Instructions"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-
-    </LinearLayout>
-
-
-    <ImageButton
-        android:id="@+id/btnNext"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_gravity="end"
-        android:layout_margin="8dp"
-        android:background="@drawable/btn_orange_forward_border"
-        android:contentDescription="@string/next"
-        android:scaleType="center"
-        android:src="@drawable/arrow_forward_icon" />
-
-</LinearLayout>
+</ScrollView>
