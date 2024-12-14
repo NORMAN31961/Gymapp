@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -23,10 +24,10 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class RegisterFragment : Fragment() {
-    val usuarioViewmodel : ViewModelUsuario by activityViewModels()
+    val usuarioViewmodel: ViewModelUsuario by activityViewModels()
     private var _binding: FragmentRegisterBinding? = null
-    private val binding get()= _binding!!
-    private lateinit var activity : AppCompatActivity
+    private val binding get() = _binding!!
+    private lateinit var activity: AppCompatActivity
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -60,7 +61,7 @@ class RegisterFragment : Fragment() {
         binding.spinnerExperience.adapter = adapter
     }
 
-    private fun ObetenerDatosUsuarios():UsuariosModel {
+    private fun ObtenerDatosUsuarios(): UsuariosModel {
         return UsuariosModel(
             binding.nameEditTextRegister.text.toString(),
             binding.emailEditTextLogin.text.toString(),
@@ -70,24 +71,38 @@ class RegisterFragment : Fragment() {
 
         )
     }
-    private fun insertarUsuarios(mUsua : UsuariosModel){
-        CoroutineScope(Dispatchers.IO).launch{
-            try {
-                val call = getRetrofit().create(conexiondb::class.java).InstarUsuarios(mUsua)
-                if (call.isSuccessful && call.body()!= null){
-                    withContext(Dispatchers.Main){
-                        usuarioViewmodel.addUsuario(mUsua)
-                    }
-                }else{
-                    Log.e("dap","Error no se encontro la informacion")
-                }
-            }
-            catch (e : Exception){
-                Log.e("dap","No se pudo conectar a la base de datos",e)
-            }
 
+    private fun insertarUsuarios(mUsua: UsuariosModel) {
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                val response = getRetrofit().create(conexiondb::class.java).Consultausuarios()
+                if (response.isSuccessful && response.body() != null) {
+                    val usuarios = response.body()
+                    val usuarioExistente = usuarios?.any { it.Corre == mUsua.Corre }
+                    if (usuarioExistente == true) {
+                        withContext(Dispatchers.Main) {
+                            Toast.makeText(requireContext(), "El usuario con este correo ya existe", Toast.LENGTH_SHORT).show()
+                        }
+                    } else {
+                        val call = getRetrofit().create(conexiondb::class.java).InstarUsuarios(mUsua)
+                        if (call.isSuccessful && call.body() != null) {
+                            withContext(Dispatchers.Main) {
+                                usuarioViewmodel.addUsuario(mUsua)
+                                Toast.makeText(requireContext(), "Usuario registrado exitosamente", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    }
+                } else {
+                    Log.e("dap", "Error al consultar usuarios")
+                }
+            } catch (e: Exception) {
+                Log.e("dap", "No se pudo conectar a la base de datos", e)
+            }
         }
     }
+
+
+
     fun getRetrofit(): Retrofit {
         return Retrofit.Builder().baseUrl(conexiondb.url)
             .addConverterFactory(GsonConverterFactory.create()).build()
@@ -102,10 +117,19 @@ class RegisterFragment : Fragment() {
 
     private fun event_Register() {
         binding.confirmButtonRegister.setOnClickListener {
-            insertarUsuarios(ObetenerDatosUsuarios())
-            (activity as MainActivity).replaceFragment(LoginFragment())
+            if (camposValidos()) {
+                insertarUsuarios(ObtenerDatosUsuarios())
+                (activity as MainActivity).replaceFragment(LoginFragment())
+            } else {
+                Toast.makeText(requireContext(), "Por favor, llena todos los campos", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
-   
+    private fun camposValidos(): Boolean {
+        return binding.nameEditTextRegister.text.toString().isNotEmpty() &&
+                binding.emailEditTextLogin.text.toString().isNotEmpty() &&
+                binding.passwordEditTextRegister.text.toString().isNotEmpty()
+
+    }
 }

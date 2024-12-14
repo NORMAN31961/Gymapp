@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.gym.MainActivity
+import com.example.gym.UserSession
 import com.example.gym.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
@@ -19,12 +20,14 @@ class SettingsFragment : Fragment() {
     ): View? {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         event_Back_Button()
         event_Login_Button()
+        actualizarEstadoBotonLogin()
     }
 
     private fun event_Back_Button() {
@@ -38,5 +41,12 @@ class SettingsFragment : Fragment() {
             (activity as MainActivity).replaceFragment(LoginFragment())
         }
 
+    }
+
+    private fun actualizarEstadoBotonLogin() {
+        binding.loginSettings.apply {
+            isEnabled = !UserSession.isLoggedIn
+            alpha = if (UserSession.isLoggedIn) 0.5f else 1.0f
+        }
     }
 }
