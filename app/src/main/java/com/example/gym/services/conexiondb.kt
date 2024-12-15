@@ -6,7 +6,10 @@ import retrofit2.http.POST
 
 interface conexiondb {
     companion object{
-        val  url : String = "http://192.168.0.13:4000"
+        //Url Jean
+//        val  url : String = "http://192.168.0.13:4000"
+        //Url Chucho
+        val  url : String = "http://192.168.110.181:4000"
     }
     @GET("/consultarUsuario")
     suspend fun Consultausuarios(): retrofit2.Response<List<UsuariosModel>>

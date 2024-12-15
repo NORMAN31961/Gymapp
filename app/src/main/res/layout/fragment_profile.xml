@@ -70,6 +70,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/bebas_neue_regular"
         android:text="@string/username"
+        android:textColor="@color/Charcoal"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

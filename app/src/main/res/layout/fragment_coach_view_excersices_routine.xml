@@ -17,15 +17,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/back_icon"
-            android:layout_width="45dp"
+            android:id="@+id/back_button_profile"
+            android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            app:tint="@color/light_gray"
             android:contentDescription="@string/Menu_Icon"
             android:src="@drawable/arrow_back_icon"
-            android:background="@color/gray"/>
+            android:background="@color/gray"
+            app:tint="@color/light_gray"/>
 
         <TextView
             android:id="@+id/text_view_routine_title"

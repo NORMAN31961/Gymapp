@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.example.gym.CoachActivity
-import com.example.gym.R
 import com.example.gym.databinding.AlertDialogCreateRoutineBinding
 import com.example.gym.databinding.FragmentAssignDaysRoutineBinding
 
@@ -19,7 +18,7 @@ class AssignDaysRoutineFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentAssignDaysRoutineBinding.inflate(inflater, container, false)
         return binding.root
@@ -32,11 +31,11 @@ class AssignDaysRoutineFragment : Fragment() {
 
     private fun init() {
         event_Back_Button()
-        event_Assing_Routine()
+        event_Assign_Routine()
     }
 
-    private fun event_Assing_Routine() {
-        binding.btnAssignRoutineFragAssigDays.setOnClickListener{
+    private fun event_Assign_Routine() {
+        binding.btnAssignRoutineFragAssigDays.setOnClickListener {
             showMessageRoutineAdded()
         }
     }
@@ -55,7 +54,7 @@ class AssignDaysRoutineFragment : Fragment() {
                 Toast.makeText(requireContext(), "Rutina Asiganada", Toast.LENGTH_SHORT).show()
                 (activity as CoachActivity).replaceFragment(HomeCoachFragment())
             }
-            .setNegativeButton("Cancelar"){ dialog, _ ->
+            .setNegativeButton("Cancelar") { dialog, _ ->
                 Toast.makeText(requireContext(), "Cancelado", Toast.LENGTH_SHORT).show()
                 dialog.dismiss()
             }

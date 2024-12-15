@@ -1,6 +1,7 @@
 package com.example.gym.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,13 +18,17 @@ class Add_Excercise_to_Routine_Fragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentAddExcerciseToRoutineBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Log.d("BackStack", "BackStack count: ${parentFragmentManager.backStackEntryCount}")
+        for (i in 0 until parentFragmentManager.backStackEntryCount) {
+            Log.d("BackStack", "Fragment: ${parentFragmentManager.getBackStackEntryAt(i).name}")
+        }
         init()
 
     }
@@ -35,8 +40,13 @@ class Add_Excercise_to_Routine_Fragment : Fragment() {
 
     private fun event_Back_Button() {
         binding.backButton.setOnClickListener {
+            Log.d("BackStack", "BackStack count: ${parentFragmentManager.backStackEntryCount}")
+            for (i in 0 until parentFragmentManager.backStackEntryCount) {
+                Log.d("BackStack", "Fragment: ${parentFragmentManager.getBackStackEntryAt(i).name}")
+            }
             requireActivity().onBackPressedDispatcher.onBackPressed()
         }
+
     }
 
     private fun event_Next_Button() {
@@ -44,7 +54,6 @@ class Add_Excercise_to_Routine_Fragment : Fragment() {
             (activity as CoachActivity).replaceFragment(Assign_Routines_To_Customers_Fragment())
         }
     }
-
 
 
 }

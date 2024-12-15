@@ -37,7 +37,7 @@ class HomeCoachFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentHomeCoachBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -101,7 +101,7 @@ class HomeCoachFragment : Fragment() {
     }
 
     private fun launchSeeRoutinesFragment() {
-        (activity as CoachActivity).replaceFragment(CoachViewRoutinesFragment())
+        (activity as CoachActivity).replaceFragment(CoachSeeRoutinesFragment())
     }
 
 }

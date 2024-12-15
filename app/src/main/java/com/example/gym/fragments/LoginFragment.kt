@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.example.gym.CoachActivity
 import com.example.gym.MainActivity
 import com.example.gym.UserSession
@@ -31,11 +32,13 @@ class LoginFragment : Fragment() {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     private fun event_Back_Button() {
         binding.backIcon.setOnClickListener {
             requireActivity().onBackPressedDispatcher.onBackPressed()
         }
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
@@ -52,6 +55,7 @@ class LoginFragment : Fragment() {
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
     }
+
     private fun launchHomeCustomerActivity() {
         val intent = Intent(requireContext(), MainActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -64,7 +68,11 @@ class LoginFragment : Fragment() {
             val password = binding.passwordEditTextLogin.text.toString()
 
             if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(requireContext(), "Por favor ingresa todos los campos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    requireContext(),
+                    "Por favor ingresa todos los campos",
+                    Toast.LENGTH_SHORT
+                ).show()
                 return@setOnClickListener
             }
 
@@ -73,12 +81,12 @@ class LoginFragment : Fragment() {
     }
 
     private fun verificarCredenciales(email: String, password: String) {
-        if(email == "Coach" && password == "Coach"){
+        if (email == "Coach" && password == "Coach") {
             launchCoachActivity()
             UserSession.userName = "Coach"
             UserSession.isLoggedIn = true
 
-        }else{
+        } else {
             CoroutineScope(Dispatchers.IO).launch {
                 try {
                     val response = getRetrofit().create(conexiondb::class.java).Consultausuarios()
@@ -98,29 +106,44 @@ class LoginFragment : Fragment() {
                             }
                         } else {
                             withContext(Dispatchers.Main) {
-                                Toast.makeText(requireContext(), "Credenciales incorrectas", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(
+                                    requireContext(),
+                                    "Credenciales incorrectas",
+                                    Toast.LENGTH_SHORT
+                                ).show()
                             }
                         }
                     } else {
                         withContext(Dispatchers.Main) {
-                            Toast.makeText(requireContext(), "Error al consultar usuarios", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                requireContext(),
+                                "Error al consultar usuarios",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
                     }
                 } catch (e: Exception) {
                     withContext(Dispatchers.Main) {
-                        Toast.makeText(requireContext(), "No se pudo conectar a la base de datos", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            requireContext(),
+                            "No se pudo conectar a la base de datos",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
                 }
             }
         }
-
+        val fragmentManager = parentFragmentManager
+        fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
     }
+
     private fun getRetrofit(): Retrofit {
         return Retrofit.Builder()
             .baseUrl(conexiondb.url)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
+
     private fun event_Register() {
         binding.registerButtonLogin.setOnClickListener {
             (activity as MainActivity).replaceFragment(RegisterFragment())

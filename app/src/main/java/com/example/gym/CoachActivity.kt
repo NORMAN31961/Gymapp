@@ -34,7 +34,7 @@ class CoachActivity : AppCompatActivity() {
     fun replaceFragment(frag: Fragment) {
         val fgTransaction = supportFragmentManager.beginTransaction()
         fgTransaction.replace(R.id.coach_activity, frag)
-        fgTransaction.addToBackStack(null)
+        fgTransaction.addToBackStack(frag.javaClass.simpleName)
         fgTransaction.commit()
     }
 }
