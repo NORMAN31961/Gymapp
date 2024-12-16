@@ -46,5 +46,6 @@
     <string name="close">Cerrado</string>
     <string name="open">Abierto</string>
     <string name="ConfirmPassword">Confirmar Contraseña</string>
+    <string name="AssignRoutine">Asignar Rutina a Cliente</string>
 
 </resources>

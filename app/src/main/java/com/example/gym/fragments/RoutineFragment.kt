@@ -38,7 +38,6 @@ class RoutineFragment : Fragment() {
         init()
     }
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

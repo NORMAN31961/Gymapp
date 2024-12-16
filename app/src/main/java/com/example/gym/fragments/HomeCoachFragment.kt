@@ -70,7 +70,7 @@ class HomeCoachFragment : Fragment() {
 
                 R.id.menu_settings -> launchSettingsFragment()
 
-                R.id.menu_home -> Toast.makeText(context, "Home", Toast.LENGTH_SHORT).show()
+                R.id.menu_home -> Toast.makeText(context, "inicio", Toast.LENGTH_SHORT).show()
             }
             true
         }

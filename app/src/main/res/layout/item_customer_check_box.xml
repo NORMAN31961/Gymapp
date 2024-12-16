@@ -6,7 +6,7 @@
     android:layout_margin="8dp">
 
     <TextView
-        android:id="@+id/tvExerciseName"
+        android:id="@+id/tvCustomerName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -17,7 +17,7 @@
         android:textSize="30sp" />
 
     <CheckBox
-        android:id="@+id/cbExercise"
+        android:id="@+id/cbCustomer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 </LinearLayout>
