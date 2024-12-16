@@ -47,5 +47,6 @@
     <string name="open">Abierto</string>
     <string name="ConfirmPassword">Confirmar Contraseña</string>
     <string name="AssignRoutine">Asignar Rutina a Cliente</string>
+    <string name="delete_account">Borrar cuenta</string>
 
 </resources>

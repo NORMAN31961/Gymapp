@@ -1,8 +1,10 @@
 import com.example.gym.model.EjercicioModel
 import com.example.gym.model.UsuariosModel
 import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Path
 
 interface conexiondb {
     companion object{
@@ -19,4 +21,8 @@ interface conexiondb {
 
     @GET("/consultarEjercicio")
     suspend fun ConsultarEjercicio(): retrofit2.Response<List<EjercicioModel>>
+
+    @DELETE("/elimnarUsuario/{Id}")
+    suspend fun EliminarUsuario(@Path("Id") Id:Int): retrofit2.Response<Any>
+
 }

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.lifecycle.lifecycleScope
 import com.example.gym.CoachActivity
 import com.example.gym.MainActivity
 import com.example.gym.UserSession
@@ -87,7 +88,7 @@ class LoginFragment : Fragment() {
             UserSession.isLoggedIn = true
 
         } else {
-            CoroutineScope(Dispatchers.IO).launch {
+            viewLifecycleOwner.lifecycleScope.launch(Dispatchers.IO)  {
                 try {
                     val response = getRetrofit().create(conexiondb::class.java).Consultausuarios()
 
@@ -99,6 +100,7 @@ class LoginFragment : Fragment() {
 
                         if (usuarioEncontrado != null) {
                             withContext(Dispatchers.Main) {
+                                UserSession.userId = usuarioEncontrado.Id
                                 UserSession.userName = usuarioEncontrado.Nombre
                                 println(UserSession.userName)
                                 UserSession.isLoggedIn = true
@@ -133,8 +135,7 @@ class LoginFragment : Fragment() {
                 }
             }
         }
-        val fragmentManager = parentFragmentManager
-        fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+
     }
 
     private fun getRetrofit(): Retrofit {

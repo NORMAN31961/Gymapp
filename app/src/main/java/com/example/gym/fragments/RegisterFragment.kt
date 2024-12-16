@@ -57,18 +57,18 @@ class RegisterFragment : Fragment() {
             R.layout.simple_spinner_item,
             opciones
         )
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        adapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item)
         binding.spinnerExperience.adapter = adapter
     }
 
     private fun ObtenerDatosUsuarios(): UsuariosModel {
         return UsuariosModel(
+            Id = 0,
             binding.nameEditTextRegister.text.toString(),
             binding.emailEditTextLogin.text.toString(),
             binding.passwordEditTextRegister.text.toString(),
             binding.spinnerExperience.selectedItem.toString(),
             "Free"
-
         )
     }
 

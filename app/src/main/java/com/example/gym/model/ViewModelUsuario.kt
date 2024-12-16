@@ -32,6 +32,7 @@ class ViewModelUsuario : ViewModel() {
 
     fun removeUsuario(position: Int) {
         val currentList = datalistUsuario.value ?: mutableListOf()
-
+        currentList.removeAt(position)
+        datalistUsuario.postValue(currentList)
     }
 }

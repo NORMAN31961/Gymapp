@@ -25,8 +25,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
-    lateinit var usuarioAdapter: UsuarioAdapter
-    val viewModelUsuario: ViewModelUsuario by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,47 +42,9 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             replaceFragment(HomeCustomerFragment())
         }
-        ListarUsuarios()
-        observerViemodel()
-        initRecyler()
 
     }
 
-    private fun ListarUsuarios() {
-        CoroutineScope(Dispatchers.IO).launch{
-            try {
-                val call = getRetrofit().create(conexiondb::class.java).Consultausuarios()
-                if (call.isSuccessful && call.body()!= null){
-                    withContext(Dispatchers.Main){
-                        viewModelUsuario.addUsuarioList(call.body()!!.toMutableList())
-                    }
-                }else{
-                    Log.e("dap","Error no se encontro la informacion")
-                }
-            }
-            catch (e : Exception){
-                Log.e("dap","No se pudo conectar a la base de datos",e)
-            }
-
-        }
-
-    }
-    fun getRetrofit():Retrofit{
-        return Retrofit.Builder().baseUrl(conexiondb.url)
-            .addConverterFactory(GsonConverterFactory.create()).build()
-    }
-
-    private fun initRecyler() {
-        binding.recycler.layoutManager = LinearLayoutManager(this)
-        usuarioAdapter = UsuarioAdapter(viewModelUsuario.datalistUsuario.value?: mutableListOf())
-        binding.recycler.adapter = usuarioAdapter
-    }
-    private fun observerViemodel(){
-        viewModelUsuario.datalistUsuario.observe(this, Observer{usuarios ->
-            usuarioAdapter.usuario
-            usuarioAdapter.notifyDataSetChanged()
-        })
-    }
 
     fun replaceFragment(frag: Fragment) {
         val fgTransaction = supportFragmentManager.beginTransaction()

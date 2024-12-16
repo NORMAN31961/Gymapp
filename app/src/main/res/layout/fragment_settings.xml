@@ -93,6 +93,22 @@
             android:textSize="22sp"
             app:backgroundTint="@null" />
 
+        <Button
+            android:id="@+id/delete_Account"
+            style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/gray_border_10dp"
+            android:fontFamily="@font/bebas_neue_regular"
+            android:hint="@string/delete_account"
+            android:paddingTop="9dp"
+            android:textAlignment="center"
+            android:textColorHint="@color/black"
+            android:textSize="22sp"
+            app:backgroundTint="@null" />
+
+
     </LinearLayout>
 
 </LinearLayout>
